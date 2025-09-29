@@ -1,0 +1,17 @@
+import * as React from 'react';
+import Svg, {SvgProps, Mask, Path, G} from 'react-native-svg';
+
+const IcArrowDownWard = (props: SvgProps) => (
+  <Svg width={24} height={24} fill="none" {...props}>
+    <Mask id="a" width={24} height={24} x={0} y={0} maskUnits="userSpaceOnUse">
+      <Path fill="#D9D9D9" d="M0 0h24v24H0z" />
+    </Mask>
+    <G mask="url(#a)">
+      <Path
+        fill={props.fill || '#A8A9B9'}
+        d="M11 16.175V5c0-.283.097-.52.288-.713A.967.967 0 0 1 12.001 4c.283 0 .52.096.712.287.192.192.288.43.288.713v11.175l4.9-4.9c.2-.2.433-.296.7-.287.266.008.5.112.7.312.183.2.279.433.287.7a.916.916 0 0 1-.287.7l-6.6 6.6c-.1.1-.209.17-.325.212a1.106 1.106 0 0 1-.375.063c-.134 0-.259-.02-.375-.063a.877.877 0 0 1-.325-.212l-6.6-6.6a.933.933 0 0 1-.275-.688c0-.274.091-.512.275-.712.2-.2.437-.3.712-.3.275 0 .513.1.713.3L11 16.175Z"
+      />
+    </G>
+  </Svg>
+);
+export default IcArrowDownWard;
